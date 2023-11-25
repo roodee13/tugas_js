@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tugas JS</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="container">
+<div class="row">
+<div class="col text-center">
+	<h1>Daftar Produk</h1>
+	<br/><br/>
+	<label id="jumlahItem" name="jumlahItem" type="text" readonly class="form-control-plaintext">Jumlah Item dipilih (0)</label>
+	<br/>
+	<form>
+	  <div class="row">
+		<div class="col">
+		  <img src="gmb1.jpg" class="img-rounded" alt="Cinque Terre"><br/>
+			<small id="emailHelp" class="form-text text-muted">Apel</small><br/>
+			<small id="emailHelp" class="form-text text-muted">10.000/kg</small><br/>
+			<button name="btn1" value="Apel" type="submit" class="btn btn-primary pilih">pilih</button>
+		</div>
+		<div class="col">
+		  <img src="gmb2.jpg" class="img-rounded" alt="Cinque Terre"><br/>
+			<small id="emailHelp" class="form-text text-muted">Nanas</small><br/>
+			<small id="emailHelp" class="form-text text-muted">6.000/buah</small><br/>
+			<button name="btn2" value="Nanas" type="submit" class="btn btn-primary pilih">pilih</button>
+		</div>
+		<div class="col">
+		  <img src="gmb3.jpg" class="img-rounded" alt="Cinque Terre"><br/>
+			<small id="emailHelp" class="form-text text-muted">Nangka</small><br/>
+			<small id="emailHelp" class="form-text text-muted">35.000/buah</small><br/>
+			<button name="btn3" value="Nangka" type="submit" class="btn btn-primary pilih">pilih</button>
+		</div>
+	  </div>
+		<br/><br/><br/><br/>
+	  <div class="row">
+		<div class="col">
+		  <img src="gmb4.jpg" class="img-rounded" alt="Cinque Terre"><br/>
+			<small id="emailHelp" class="form-text text-muted">Belimbing</small><br/>
+			<small id="emailHelp" class="form-text text-muted">5.000/kg</small><br/>
+			<button name="btn4" value="Belimbing" type="submit" class="btn btn-primary pilih">pilih</button>
+		</div>
+		<div class="col">
+		  <img src="gmb5.jpg" class="img-rounded" alt="Cinque Terre"><br/>
+			<small id="emailHelp" class="form-text text-muted">Jeruk</small><br/>
+			<small id="emailHelp" class="form-text text-muted">15.000/kg</small><br/>
+			<button name="btn5" value="Jeruk" type="submit" class="btn btn-primary pilih">pilih</button>
+		</div>
+		<div class="col">
+		  <img src="gmb6.jpg" class="img-rounded" alt="Cinque Terre"><br/>
+			<small id="emailHelp" class="form-text text-muted">Semangka</small><br/>
+			<small id="emailHelp" class="form-text text-muted">18.000/buah</small><br/>
+			<button name="btn6" value="Semangka" type="submit" class="btn btn-primary pilih">pilih</button>
+		</div>
+	  </div>
+		<br/><br/><br/><br/>
+	  <div class="row">
+		<div class="col">
+		  <img src="gmb7.jpg" class="img-rounded" alt="Cinque Terre"><br/>
+			<small id="emailHelp" class="form-text text-muted">Sawo</small><br/>
+			<small id="emailHelp" class="form-text text-muted">3.000/kg</small><br/>
+			<button name="btn4" value="Sawo" type="submit" class="btn btn-primary pilih">pilih</button>
+		</div>
+		<div class="col">
+		  <img src="gmb8.jpg" class="img-rounded" alt="Cinque Terre"><br/>
+			<small id="emailHelp" class="form-text text-muted">Durian</small><br/>
+			<small id="emailHelp" class="form-text text-muted">45.000/buah</small><br/>
+			<button name="btn5" value="Durian" type="submit" class="btn btn-primary pilih">pilih</button>
+		</div>
+		<div class="col">
+		  <img src="gmb9.jpg" class="img-rounded" alt="Cinque Terre"><br/>
+			<small id="emailHelp" class="form-text text-muted">Mangga</small><br/>
+			<small id="emailHelp" class="form-text text-muted">15.000</small><br/>
+			<button name="btn6" value="Mangga" type="submit" class="btn btn-primary pilih">pilih</button>
+		</div>
+	  </div>
+	</form>
+</div>
+</div>
+</div>	
+	<script>
+	$(document).ready(function() {
+		$(".pilih").click(function() {
+			let qString = window.location.href;
+			let urlParams = new URLSearchParams(qString);
+			console.log(urlParams.get("jumlahItem"));
+		});
+	});
+
+	</script>
+</body>
+</html>
